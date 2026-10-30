@@ -8,7 +8,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.8;
-            color: #333;
+            color: #333333;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
@@ -18,63 +18,82 @@
             color: #2e7d32;
             border-bottom: 2px solid #a5d6a7;
             padding-bottom: 10px;
+            font-size: 26px;
         }
         h2 {
             color: #388e3c;
             margin-top: 30px;
+            font-size: 20px;
+            border-left: 4px solid #4caf50;
+            padding-left: 10px;
+        }
+        p, li {
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
         }
         .intro-box {
             background-color: #e8f5e9;
             padding: 20px;
             border-radius: 8px;
-            border-left: 5px solid #2e7d32;
+            border: 1px solid #c8e6c9;
             margin-bottom: 30px;
+        }
+        .highlight {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+            margin: 20px 0;
         }
         .footer {
             margin-top: 50px;
             font-size: 13px;
-            color: #777;
+            color: #777777;
             text-align: center;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #e0e0e0;
             padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. 應用程式介紹區塊 (解決：首頁未說明應用程式用途) -->
     <h1>植屬於你 (Plant App)</h1>
 
     <div class="intro-box">
-        <h2>關於「植屬於你」應用程式</h2>
-        <p>「植屬於你」是一款專為植物愛好者設計的植物生長紀錄與照護管理工具。本應用程式鼓勵使用者透過拍照與日誌，輕鬆記錄自家植物的每日生長變化、澆水施肥歷程與分類標籤管理。</p>
-        <p><strong>主要功能：</strong></p>
+        <h2 style="margin-top:0; border:none; padding:0;">關於「植屬於你」應用程式</h2>
+        <p>「植屬於你」是一款專為植物栽培愛好者與園藝玩家設計的植物生長紀錄與照護管理工具。本應用程式鼓勵使用者透過拍攝照片與撰寫日誌，輕鬆記錄自家植物的每日生長變化、澆水施肥歷程與分類標籤管理。</p>
+        <p><strong>主要功能特色：</strong></p>
         <ul>
-            <li>植物分類與標籤排序管理</li>
-            <li>生長照片與文字日誌時間軸紀錄</li>
-            <li>植物照護指南與統計分析</li>
-            <li>個人化 Google Drive 雲端資料備份與還原功能</li>
+            <li><strong>植物分類與標籤排序：</strong>提供科名、屬名、種名以及自訂標籤之多維度管理。</li>
+            <li><strong>生長時間軸日誌：</strong>支援照片與文字記錄，精確追蹤植物生長變化。</li>
+            <li><strong>植物照護指南與統計：</strong>內建照護知識庫與持有天數、紀錄筆數統計分析。</li>
+            <li><strong>個人 Google Drive 雲端備份：</strong>提供使用者將本機資料安全備份至個人 Google 雲端硬碟。</li>
         </ul>
     </div>
 
     <hr>
 
+    <!-- 2. 完整隱私權政策區塊 (解決：隱私權政策頁面內容不足) -->
     <h1>隱私權政策 (Privacy Policy)</h1>
     <p>最後更新日期：2026 年 10 月 30 日</p>
 
-    <p>「植屬於你」（以下簡稱本應用程式）極力重視您的個人隱私。本應用程式為獨立運作之工具，<strong>開發者絕不會收集、傳輸、儲存或存取您的任何個人資料、照片或植物紀錄</strong>。所有的資料與照片皆僅存放在您的行動裝置本機，或您主動備份至您個人的 Google Drive 雲端硬碟中。</p>
-
-    <h2>1. 資料收集與處理</h2>
-    <p>您在應用程式中輸入的植物名稱、備註與拍攝之相片，完全儲存於您的行動裝置本機資料庫（Room Database）與手機相簿中，開發者端未建置任何外部伺服器接收資料。</p>
-
-    <h2>2. Google Drive 雲端備份服務</h2>
-    <p>當您啟用選擇性的雲端備份功能時，應用程式會透過 Google API 連接至<strong>您個人的 Google Drive 帳號</strong>儲存備份檔。開發者完全無權存取或檢視您的雲端硬碟檔案。</p>
-
-    <h2>3. 聯絡方式</h2>
-    <p>若您對本應用程式或隱私權政策有任何疑問，請透過以下電子郵件與我們聯繫：s973180@gmail.com</p>
-
-    <div class="footer">
-        &copy; 2026 植屬於你 (Plant App). All rights reserved.
+    <div class="highlight">
+        <strong>核心隱私承諾：</strong>「植屬於你」（以下簡稱本應用程式）極力重視您的個人隱私。本應用程式為完全獨立運作之工具，<strong>開發者絕不會收集、傳輸、儲存、出售或存取您的任何個人資料、照片或植物紀錄</strong>。所有資料與照片皆僅存放在您的行動裝置本機，或由您主動備份至您個人的 Google Drive 雲端硬碟中。
     </div>
 
-</body>
-</html>
+    <h2>1. 個人資料之收集、處理與使用說明</h2>
+    <p>本應用程式在使用過程中對於各項資料的處理方式如下：</p>
+    <ul>
+        <li><strong>植物紀錄資料：</strong>您在應用程式中輸入的植物名稱、備註、分類標籤與文字日誌，完全儲存於您行動裝置本機的 Room 資料庫中。</li>
+        <li><strong>照片與媒體檔案：</strong>當您拍攝或上傳植物照片時，照片檔案僅會儲存在您手機本機的儲存空間中，絕不會傳輸至任何開發者控制的第三方伺服器。</li>
+        <li><strong>無帳號註冊：</strong>本應用程式不需要註冊獨立帳號即可使用，開發者並未建置任何外部資料庫伺服器來收集用戶行為。</li>
+    </ul>
+
+    <h2>2. Google API 與 Google Drive 雲端服務權限宣告</h2>
+    <p>本應用程式整合了 Google Drive API 提供選擇性的「資料備份與還原」功能，其相關權限與防護說明如下：</p>
+    <ul>
+        <li><strong>存取範圍：</strong>應用程式僅會在您手動點擊「雲端備份/還原」時請求授權，且僅存取本應用程式於您的 Google Drive 建立之專用備份資料夾或 App Data 資料夾。</li>
+        <li><strong>資料隱私：</strong>備份檔案會直接傳輸至<strong>您個人的 Google Drive 帳號</strong>內。開發者與

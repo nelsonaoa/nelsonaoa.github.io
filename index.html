@@ -14,6 +14,10 @@
             --card-bg: #ffffff;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.8;
@@ -63,6 +67,7 @@
             padding: 6px 16px;
             border-radius: 20px;
             transition: all 0.2s ease;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -77,6 +82,8 @@
             margin-bottom: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             border: 1px solid #e0e0e0;
+            scroll-margin-top: 80px; /* 避免被 sticky 導覽列遮擋 */
+            min-height: 400px;
         }
 
         h2 {
@@ -141,10 +148,7 @@
             text-align: center;
             border-top: 1px solid #e0e0e0;
             padding-top: 20px;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            padding-bottom: 300px; /* 增加底部留白以供滾動 */
         }
     </style>
 </head>
@@ -171,4 +175,100 @@
         <div class="feature-grid">
             <div class="feature-item">
                 <h4>🌿 專業分類體系</h4>
-                <p>支援依據「科、屬、種」多層級進行科學化分類管理，讓您的植物
+                <p>支援依據「科、屬、種」多層級進行科學化分類管理，讓您的植物收藏井然有序。</p>
+            </div>
+            <div class="feature-item">
+                <h4>🏷️ 自訂標籤管理</h4>
+                <p>靈活的自訂標籤功能，可依據「陽台區/室內區」、「澆水頻率」或「自訂群組」快速篩選查看。</p>
+            </div>
+            <div class="feature-item">
+                <h4>🌱 植株生長歷程追蹤</h4>
+                <p>以個體植株為單位，結合照片與日誌，完整記錄從發根、發芽、抽新芽、開花到結果的生命週期。</p>
+            </div>
+            <div class="feature-item">
+                <h4>📊 偏好與紀錄統計</h4>
+                <p>智慧分析您的收藏偏好，圖表化呈現最喜愛的科屬種類，並根據紀錄頻率統計出您「最關愛的植物」。</p>
+            </div>
+            <div class="feature-item">
+                <h4>☁️ 個人 Google Drive 備份</h4>
+                <p>支援一鍵備份本機資料與照片至個人雲端硬碟，更換手機也能輕鬆還原珍貴紀錄。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 隱私權政策區塊 -->
+    <section id="privacy">
+        <h2>隱私權政策 (Privacy Policy)</h2>
+        <p><strong>最後更新日期：2026 年 10 月 30 日</strong></p>
+
+        <div class="highlight-box">
+            <strong>核心隱私承諾：</strong>「植屬於你」（以下簡稱本應用程式）極力重視您的個人隱私。本應用程式為完全獨立運作之工具，<strong>開發者絕不會收集、傳輸、儲存、出售或存取您的任何個人資料、照片或植物紀錄</strong>。所有資料皆存放在您的行動裝置本機，或由您主動備份至個人的 Google Drive 雲端硬碟。
+        </div>
+
+        <h3>1. 個人資料之收集與處理說明</h3>
+        <ul>
+            <li><strong>植物紀錄與分類資料：</strong>您所輸入的科屬種名稱、自訂標籤、生長狀態（發根、開花等）及文字日誌，完全存儲於您行動裝置本機的 Room 資料庫中。</li>
+            <li><strong>照片與媒體檔案：</strong>拍攝或上傳之植物照片僅存放在您手機本機儲存空間，開發者未建置任何外部伺服器接收或讀取這些檔案。</li>
+            <li><strong>統計數據：</strong>偏好統計（如最喜愛的科屬、紀錄最多的植株）皆於本機即時計算呈現，不包含任何個人識別資訊，亦不會上傳至外部。</li>
+        </ul>
+
+        <h3>2. Google API 與 Google Drive 雲端服務權限宣告</h3>
+        <ul>
+            <li><strong>權限範疇：</strong>應用程式僅在您點擊「雲端備份/還原」時請求授權，且僅存取本應用程式於您 Google Drive 建立之專用備份資料夾。</li>
+            <li><strong>資料安全：</strong>備份檔案直接加密傳輸至<strong>您個人的 Google Drive 帳號</strong>。開發者與任何第三方完全無法讀取或存取您的雲端內容。</li>
+            <li><strong>遵循規範：</strong>本應用程式對自 Google API 接收到的資訊的使用，完全遵循 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API 服務使用者資料政策</a>（包含限制使用要求）。</li>
+        </ul>
+
+        <h3>3. 裝置權限需求說明</h3>
+        <ul>
+            <li><strong>相機權限 (CAMERA)：</strong>用於拍攝植物照片並新增至生長紀錄。</li>
+            <li><strong>相簿/儲存空間權限：</strong>用於讀取與選取手機內既有之植物照片。</li>
+            <li><strong>網路權限 (INTERNET)：</strong>僅用於與 Google Drive 進行安全備份與還原傳輸。</li>
+        </ul>
+
+        <h3>4. 第三方 SDK 與追蹤技術</h3>
+        <p>本應用程式<strong>不包含</strong>任何第三方廣告 SDK（如 Google AdMob）、追蹤分析工具（如 Firebase Analytics）或跨站追蹤技術，絕不追蹤您的數位足跡。</p>
+
+        <h3>5. 聯絡方式</h3>
+        <p>若您對本隱私權政策有任何疑問，請透過電子郵件與我們聯繫：<a href="mailto:s973180@gmail.com">s973180@gmail.com</a></p>
+    </section>
+
+    <!-- 3. 服務條款區塊 -->
+    <section id="terms">
+        <h2>服務條款 (Terms of Service)</h2>
+        <p><strong>最後更新日期：2026 年 10 月 30 日</strong></p>
+
+        <p>歡迎使用「植屬於你」（以下簡稱「本應用程式」）。當您下載、安裝或使用本應用程式時，即表示您已閱讀、理解並同意接受本服務條款之所有內容。</p>
+
+        <h3>1. 服務內容與授權</h3>
+        <p>本應用程式提供植物資訊分類管理、生長歷程紀錄、統計分析及雲端備份等功能。開發者授予您一份個人、非排他性、不可轉讓且可撤銷的使用授權，僅限於個人非商業性用途使用。</p>
+
+        <h3>2. 使用者責任與資料備份</h3>
+        <ul>
+            <li>所有由您輸入之文字、分類標籤與上傳之照片，均由您自行承擔完全責任。</li>
+            <li>本應用程式採用「離線優先 (Offline-first)」架構，所有資料預設儲存於您的行動裝置本機。<strong>使用者應定期使用 Google Drive 雲端備份功能</strong>，以防裝置損壞、遺失或應用程式卸載導致資料遺失。</li>
+        </ul>
+
+        <h3>3. 智慧財產權聲明</h3>
+        <p>本應用程式之介面設計、程式碼、標誌與相關技術之智慧財產權均歸開發者所有。您在應用程式中所創建與紀錄之植物相片及文字內容，智慧財產權仍歸您個人所有。</p>
+
+        <h3>4. 免責聲明 (Disclaimer)</h3>
+        <ul>
+            <li>本應用程式按「現狀 (As-Is)」提供，不提供任何形式之明示或暗示擔保。</li>
+            <li>內建之「統計分析」僅供參考，不保證植物栽種之成功率或特定結果。</li>
+            <li>開發者對於因硬體故障、系統更新、未進行備份或第三方服務（如 Google Drive）中斷而導致之資料遺失，不承擔任何直接或間接賠償責任。</li>
+        </ul>
+
+        <h3>5. 條款修改與適用法律</h3>
+        <p>開發者保留隨時修改本服務條款之權利，修改後的條款將公佈於本網頁。本條款之解釋與適用，均依中華民國法律為準據法。</p>
+
+        <h3>6. 聯絡我們</h3>
+        <p>若您對本服務條款有任何疑問或建議，請聯繫開發者信箱：<a href="mailto:s973180@gmail.com">s973180@gmail.com</a></p>
+    </section>
+
+    <div class="footer">
+        &copy; 2026 植屬於你 (Plant App). All rights reserved.
+    </div>
+
+</body>
+</html>

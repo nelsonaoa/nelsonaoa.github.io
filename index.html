@@ -49,7 +49,7 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             margin: 20px 0 30px;
             background: var(--primary-light);
             padding: 12px;
@@ -58,6 +58,7 @@
             top: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             z-index: 100;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -83,7 +84,7 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             border: 1px solid #e0e0e0;
             scroll-margin-top: 80px; /* 避免被 sticky 導覽列遮擋 */
-            min-height: 400px;
+            min-height: 350px;
         }
 
         h2 {
@@ -133,6 +134,55 @@
             font-size: 14px;
         }
 
+        /* 版本紀錄時間軸樣式 */
+        .version-timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-border);
+            margin: 20px 0 10px 10px;
+        }
+
+        .version-card {
+            position: relative;
+            margin-bottom: 25px;
+            background: var(--bg-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 3px solid white;
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        .version-card ul {
+            margin: 5px 0 0 0;
+            padding-left: 18px;
+        }
+
+        .version-card li {
+            margin-bottom: 4px;
+        }
+
         .highlight-box {
             background-color: #fff3e0;
             padding: 18px;
@@ -162,6 +212,7 @@
     <!-- 導覽列：點擊直接跳轉對應段落 -->
     <nav>
         <a href="#about">關於 App</a>
+        <a href="#changelog">版本紀錄</a>
         <a href="#privacy">隱私權政策</a>
         <a href="#terms">服務條款</a>
     </nav>
@@ -174,29 +225,109 @@
         <h3>核心特色與主要功能</h3>
         <div class="feature-grid">
             <div class="feature-item">
-                <h4>🌿 專業分類體系</h4>
-                <p>支援依據「科、屬、種」多層級進行科學化分類管理，讓您的植物收藏井然有序。</p>
+                <h4>🌿 專業分類體系與摺疊優化</h4>
+                <p>支援依據「科、屬、種」多層級進行科學化分類管理，並提供優化的直覺式摺疊檢視，讓您的植物收藏井然有序。</p>
             </div>
             <div class="feature-item">
-                <h4>🏷️ 自訂標籤管理</h4>
-                <p>靈活的自訂標籤功能，可依據「陽台區/室內區」、「澆水頻率」或「自訂群組」快速篩選查看。</p>
+                <h4>🏷️ 靈活標籤與專屬排序</h4>
+                <p>可依據「陽台區/室內區」、「澆水頻率」設定自訂標籤，搭配專屬排序頁面，快速查找並管理特定群組。</p>
             </div>
             <div class="feature-item">
-                <h4>🌱 植株生長歷程追蹤</h4>
-                <p>以個體植株為單位，結合照片與日誌，完整記錄從發根、發芽、抽新芽、開花到結果的生命週期。</p>
+                <h4>🌱 植株歷程與可自訂日期</h4>
+                <p>結合照片與日誌，完整記錄發芽、抽葉、開花等生命週期；支援自訂紀錄與 EXIF 日期，事後補登一樣精確。</p>
             </div>
             <div class="feature-item">
-                <h4>📊 偏好與紀錄統計</h4>
-                <p>智慧分析您的收藏偏好，圖表化呈現最喜愛的科屬種類，並根據紀錄頻率統計出您「最關愛的植物」。</p>
+                <h4>🔍 全能整合搜尋與歷史紀錄</h4>
+                <p>強大的整合搜尋功能，支援關鍵字與搜尋歷史紀錄，迅速定位目標植株、標籤或日誌紀錄。</p>
+            </div>
+            <div class="feature-item">
+                <h4>💛 智慧關懷與被遺忘提醒</h4>
+                <p>內建「關懷名單」與「被遺忘植物」提示功能，自動幫您找出許久未維護或需要特別照顧的寶貝植株。</p>
+            </div>
+            <div class="feature-item">
+                <h4>📖 專業照護指南</h4>
+                <p>提供細緻的照護指南參考，幫助您快速掌握各類植物的環境需求、澆水頻率與栽種要領。</p>
+            </div>
+            <div class="feature-item">
+                <h4>📊 偏好統計與直橫螢幕適配</h4>
+                <p>圖表化呈現科屬收藏偏好與照顧頻率，並對直式與橫式螢幕進行極佳的版面流暢度優化。</p>
             </div>
             <div class="feature-item">
                 <h4>☁️ 個人 Google Drive 備份</h4>
-                <p>支援一鍵備份本機資料與照片至個人雲端硬碟，更換手機也能輕鬆還原珍貴紀錄。</p>
+                <p>支援一鍵備份本機資料、照片與日誌至個人雲端硬碟，更換手機也能輕鬆還原珍貴紀錄。</p>
             </div>
         </div>
     </section>
 
-    <!-- 2. 隱私權政策區塊 -->
+    <!-- 2. 版本更新紀錄區塊 -->
+    <section id="changelog">
+        <h2>版本更新紀錄 (Changelog)</h2>
+        <p>我們持續優化「植屬於你」的使用體驗，以下為各版本的更新細節：</p>
+
+        <div class="version-timeline">
+
+            <!-- v1.1.4 -->
+            <div class="version-card">
+                <span class="version-tag">v1.1.4</span>
+                <ul>
+                    <li>全能整合搜尋功能，提升查找效率</li>
+                    <li>新增「關懷名單」功能，重點照護特定植株</li>
+                    <li>優化分類頁面與照護指南運作順暢度</li>
+                    <li>微調與優化直式、橫式螢幕的介面顯示方式</li>
+                </ul>
+            </div>
+
+            <!-- v1.1.3 -->
+            <div class="version-card">
+                <span class="version-tag">v1.1.3</span>
+                <ul>
+                    <li>新增「被遺忘植物」提醒機制</li>
+                    <li>新增搜尋植物功能與專業照護指南</li>
+                    <li>加強植物卡片的動態摺疊與展開方式</li>
+                </ul>
+            </div>
+
+            <!-- v1.1.2 -->
+            <div class="version-card">
+                <span class="version-tag">v1.1.2</span>
+                <ul>
+                    <li>新增搜尋歷史紀錄功能，方便快速重複搜尋</li>
+                </ul>
+            </div>
+
+            <!-- v1.1.1 -->
+            <div class="version-card">
+                <span class="version-tag">v1.1.1</span>
+                <ul>
+                    <li>新增智慧統計功能，視覺化分析收藏偏好</li>
+                    <li>新增專屬自訂排序頁面</li>
+                </ul>
+            </div>
+
+            <!-- v1.1.0 -->
+            <div class="version-card">
+                <span class="version-tag">v1.1.0</span>
+                <ul>
+                    <li>新增個人 Google Drive 雲端備份與還原功能</li>
+                    <li>新增植株日誌專屬頁面</li>
+                    <li>新增分類層級動態摺疊功能</li>
+                </ul>
+            </div>
+
+            <!-- v1.0 -->
+            <div class="version-card">
+                <span class="version-tag">v1.0</span>
+                <ul>
+                    <li>支援依「科、屬、種」多層級科學化分類</li>
+                    <li>新增靈活自訂標籤頁面</li>
+                    <li>植株生長紀錄支援可自訂日期與照片說明</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. 隱私權政策區塊 -->
     <section id="privacy">
         <h2>隱私權政策 (Privacy Policy)</h2>
         <p><strong>最後更新日期：2026 年 10 月 30 日</strong></p>
@@ -233,7 +364,7 @@
         <p>若您對本隱私權政策有任何疑問，請透過電子郵件與我們聯繫：<a href="mailto:s973180@gmail.com">s973180@gmail.com</a></p>
     </section>
 
-    <!-- 3. 服務條款區塊 -->
+    <!-- 4. 服務條款區塊 -->
     <section id="terms">
         <h2>服務條款 (Terms of Service)</h2>
         <p><strong>最後更新日期：2026 年 10 月 30 日</strong></p>

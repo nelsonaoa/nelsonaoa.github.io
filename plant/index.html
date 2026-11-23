@@ -4,209 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>植屬於你 - 官方網站、隱私權政策與服務條款</title>
-    <style>
-        :root {
-            --primary-color: #2e7d32;
-            --primary-light: #e8f5e9;
-            --primary-border: #a5d6a7;
-            --text-color: #333333;
-            --bg-color: #f9fbf9;
-            --card-bg: #ffffff;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--bg-color);
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 0 20px;
-            border-bottom: 2px solid var(--primary-border);
-        }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #666666;
-            margin-top: 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin: 20px 0 30px;
-            background: var(--primary-light);
-            padding: 12px;
-            border-radius: 8px;
-            position: sticky;
-            top: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            z-index: 100;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            padding: 6px 16px;
-            border-radius: 20px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border: 1px solid #e0e0e0;
-            scroll-margin-top: 80px; /* 避免被 sticky 導覽列遮擋 */
-            min-height: 350px;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 22px;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 12px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            color: #388e3c;
-            font-size: 17px;
-            margin-top: 20px;
-        }
-
-        p, li {
-            font-size: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .feature-item {
-            background: var(--primary-light);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary-color);
-        }
-
-        .feature-item h4 {
-            margin: 0 0 8px 0;
-            color: var(--primary-color);
-        }
-
-        .feature-item p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        /* 版本紀錄時間軸樣式 */
-        .version-timeline {
-            position: relative;
-            padding-left: 20px;
-            border-left: 3px solid var(--primary-border);
-            margin: 20px 0 10px 10px;
-        }
-
-        .version-card {
-            position: relative;
-            margin-bottom: 25px;
-            background: var(--bg-color);
-            padding: 16px 20px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .version-card::before {
-            content: '';
-            position: absolute;
-            left: -28px;
-            top: 20px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            border: 3px solid white;
-        }
-
-        .version-tag {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            padding: 2px 10px;
-            border-radius: 12px;
-            margin-bottom: 8px;
-        }
-
-        .version-card ul {
-            margin: 5px 0 0 0;
-            padding-left: 18px;
-        }
-
-        .version-card li {
-            margin-bottom: 4px;
-        }
-
-        .highlight-box {
-            background-color: #fff3e0;
-            padding: 18px;
-            border-left: 5px solid #ff9800;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #777777;
-            text-align: center;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 20px;
-            padding-bottom: 300px; /* 增加底部留白以供滾動 */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>植屬於你</h1>
-        <p class="subtitle">專為植物愛好者打造的專業分類與生長歷程紀錄工具</p>
+    <!-- 頂部返回導覽列 -->
+    <div class="top-bar">
+        <a href="../index.html" class="back-btn">← 返回專案總覽</a>
+    </div>
+
+    <!-- 奇幻星空 × 鹿角蕨精靈主視覺橫幅 -->
+    <header class="hero-banner">
+        <div class="hero-image-wrapper">
+            <img src="hero-plant.jpg" alt="植屬於你 - 鹿角蕨精靈主視覺">
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">🌿 奇幻植栽管理 × 生長日誌</span>
+            <h1>植屬於你</h1>
+            <p class="subtitle">專為植物愛好者打造的專業分類與生長歷程紀錄工具，用魔法般的細膩呵護記錄每一株珍愛綠植。</p>
+            <div class="hero-tags">
+                <span>✦ 科屬種科學分類</span>
+                <span>✦ 個人雲端備份</span>
+                <span>✦ 離線優先無廣告</span>
+            </div>
+        </div>
     </header>
 
     <!-- 導覽列：點擊直接跳轉對應段落 -->

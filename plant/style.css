@@ -1,0 +1,328 @@
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #e8f5e9;
+    --primary-border: #a5d6a7;
+    /* 從主視覺提取的星空紫藍與鹿角蕨暖金 */
+    --cosmic-dark: #151932;
+    --cosmic-mid: #242b52;
+    --magic-gold: #e6c27a;
+    --magic-gold-border: rgba(230, 194, 122, 0.45);
+    --text-color: #333333;
+    --bg-color: #f6f8f7;
+    --card-bg: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+/* 頂部返回按鈕列 */
+.top-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background-color: var(--card-bg);
+    color: var(--cosmic-dark);
+    border: 1px solid #d5dce0;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--cosmic-dark);
+    color: var(--magic-gold);
+    border-color: var(--cosmic-dark);
+    transform: translateX(-2px);
+}
+
+/* 奇幻星空主視覺橫幅 */
+.hero-banner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: radial-gradient(circle at 20% 30%, #2d3566 0%, var(--cosmic-dark) 75%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 16px;
+    border: 1px solid var(--magic-gold-border);
+    box-shadow: 0 10px 25px rgba(21, 25, 50, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 微微星光光暈裝飾 */
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(230, 194, 122, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-image-wrapper {
+    flex-shrink: 0;
+    width: 170px;
+    border-radius: 12px;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--magic-gold), #66bb6a, #7e57c2);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(230, 194, 122, 0.15);
+    color: var(--magic-gold);
+    border: 1px solid var(--magic-gold-border);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content .subtitle {
+    font-size: 15.5px;
+    color: #d6dcf0;
+    margin: 0 0 18px 0;
+    line-height: 1.65;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hero-tags span {
+    font-size: 12.5px;
+    color: #a5d6a7;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* 導覽列 */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 22px 0 28px;
+    background: var(--card-bg);
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e0e6e3;
+    position: sticky;
+    top: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 內容區塊卡片 */
+section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e7e4;
+    scroll-margin-top: 80px;
+    min-height: 350px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 22px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2e6b34;
+    font-size: 17px;
+    margin-top: 22px;
+}
+
+p, li {
+    font-size: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* 功能特色網格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.feature-item {
+    background: var(--primary-light);
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+}
+
+.feature-item h4 {
+    margin: 0 0 8px 0;
+    color: var(--primary-color);
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 版本紀錄時間軸 */
+.version-timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-border);
+    margin: 20px 0 10px 10px;
+}
+
+.version-card {
+    position: relative;
+    margin-bottom: 25px;
+    background: var(--bg-color);
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.version-card::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary-border);
+}
+
+.version-tag {
+    display: inline-block;
+    background: var(--cosmic-dark);
+    color: var(--magic-gold);
+    font-weight: bold;
+    font-size: 13.5px;
+    padding: 2px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.version-card ul {
+    margin: 5px 0 0 0;
+    padding-left: 18px;
+}
+
+.version-card li {
+    margin-bottom: 4px;
+}
+
+/* 隱私承諾提示框（呼應插畫暖金色） */
+.highlight-box {
+    background-color: #fdf8ee;
+    padding: 18px;
+    border-left: 5px solid #d49b35;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #777777;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    padding-bottom: 120px;
+}
+
+/* 手機版自適應調整 */
+@media (max-width: 640px) {
+    .hero-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+    }
+
+    .hero-image-wrapper {
+        width: 150px;
+    }
+
+    .hero-tags {
+        justify-content: center;
+    }
+}

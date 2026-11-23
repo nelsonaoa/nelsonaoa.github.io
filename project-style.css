@@ -1,5 +1,12 @@
+/* 1. 全站通用基底色（所有主題都會自動吃到） */
 :root {
-    /* 預設主題色（植屬於你 - 森林綠 × 星空紫） */
+    --text-color: #333333;
+    --bg-color: #f6f8f7;
+    --card-bg: #ffffff;
+}
+
+/* 2. 植屬於你 - 森林綠 × 星空紫 */
+body.theme-green {
     --primary-color: #2e7d32;
     --primary-light: #e8f5e9;
     --primary-border: #a5d6a7;
@@ -12,13 +19,9 @@
     --frame-gradient: linear-gradient(135deg, #e6c27a, #66bb6a, #7e57c2);
     --tag-bg: #151932;
     --tag-color: #e6c27a;
-
-    --text-color: #333333;
-    --bg-color: #f6f8f7;
-    --card-bg: #ffffff;
 }
 
-/* 記帳軟體主題色（在 <body class="theme-blue"> 啟用：深海藍 × 琥珀金） */
+/* 3. 記帳軟體 - 深海藍 × 琥珀金 */
 body.theme-blue {
     --primary-color: #1565c0;
     --primary-light: #e3f2fd;

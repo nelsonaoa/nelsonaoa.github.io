@@ -138,7 +138,14 @@ nav button.active {
     font-size: 32px;
     line-height: 1;
 }
-
+.project-icon-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px; /* 模擬 Android App Icon 的圓角矩形 */
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
 .project-badge {
     font-size: 12px;
     font-weight: bold;

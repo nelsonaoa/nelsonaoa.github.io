@@ -271,6 +271,13 @@ ul {
     box-shadow: 0 0 0 2px var(--primary-border);
 }
 
+.version-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
 .version-tag {
     display: inline-block;
     background: var(--cosmic-dark);
@@ -279,7 +286,12 @@ ul {
     font-size: 13.5px;
     padding: 2px 12px;
     border-radius: 12px;
-    margin-bottom: 8px;
+}
+
+.version-date {
+    font-size: 13px;
+    color: #6c7a73;
+    font-weight: 500;
 }
 
 .version-card ul {
